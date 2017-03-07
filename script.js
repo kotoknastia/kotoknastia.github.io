@@ -186,8 +186,8 @@ function cityOnChange() {
 
 function chooseCity(countryName) {
 	ajax_get('cities.json', function(data) {
-		for (var i = 0; i < data["country"].length; i++) {
-			if (countryName == data[i]["country"]) {
+		for (key in data) {
+			if (countryName == data[key]["country"]) {
 				$("cities").innerHTML += "<option value=" + data[i]["name"] + "></option>";
 			}
 		}
