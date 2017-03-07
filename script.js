@@ -244,6 +244,7 @@ function fbChecked() {
 		$("fbChecked").setAttributeNode(document.createAttribute("hidden"));
 		validationFb = true;
 	}
+	validateButton();
 }
 
 function vkChecked() {
@@ -254,6 +255,7 @@ function vkChecked() {
 		$("vkChecked").setAttributeNode(document.createAttribute("hidden"));
 		validationVk = true;
 	}
+	validateButton();
 }
 
 function twitChecked() {
@@ -264,6 +266,7 @@ function twitChecked() {
 		$("twitChecked").setAttributeNode(document.createAttribute("hidden"));
 		validationTwit = true;
 	}
+	validateButton();
 }
 
 function okChecked() {
@@ -274,6 +277,7 @@ function okChecked() {
 		$("okChecked").setAttributeNode(document.createAttribute("hidden"));
 		validationOk = true;
 	}
+	validateButton();
 }
 
 function fbOnChange() {
