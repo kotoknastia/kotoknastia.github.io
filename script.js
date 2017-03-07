@@ -45,7 +45,7 @@ function init() {
     prevClick();
     ajax_get('countries.json', function(data) {
 	    for (var i = 1; i < 11; i++) {
-	    	$("countries").innerHTML += "<option name=" + i + " value=" + data[i] + "></option>";
+	    	$("countries").innerHTML += "<option id=" + i + " value=" + data[i] + "></option>";
 	    }
 	});
 }
@@ -158,7 +158,7 @@ function countryOnChange() {
     	$("countryErr").innerHTML = "";
     	validationCountry = true;
     	val = this.value;
-    	id = this.name;
+    	id = this.id;
     	save("country", val);
     }
     validateButton();
