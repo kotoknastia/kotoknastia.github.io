@@ -46,8 +46,6 @@ function init() {
     ajax_get('countries.json', function(data) {
 	    for (var i = 1; i < 11; i++) {
 	    	$("countries").innerHTML += "<option name=" + i + " value=" + data[i] + "></option>";
-	    	//choosenCountryName = data[i];
-	    	//choosenCountry = i;
 	    }
 	});
 }
@@ -250,24 +248,28 @@ function fbOnChange() {
 	if (validationSocial) {
 		validationFb = true;
 	}
+	validateButton();
 }
 function vkOnChange() {
 	socialOnChange("vkChecked");
 	if (validationSocial) {
 		validationVk = true;
 	}
+	validateButton();
 }
 function twitOnChange() {
 	socialOnChange("twitChecked");
 	if (validationSocial) {
 		validationTwit = true;
 	}
+	validateButton();
 }
 function okOnChange() {
 	socialOnChange("okChecked");
 	if (validationSocial) {
 		validationOk = true;
 	}
+	validateButton();
 }
 
 function socialOnChange(social) {
